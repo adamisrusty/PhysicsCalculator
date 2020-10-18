@@ -1,0 +1,10 @@
+//
+// Created by Adam Gutierrez on 10/17/20.
+//
+
+#ifndef PHYSICSCALCULATOR_VALIDATION_H
+#define PHYSICSCALCULATOR_VALIDATION_H
+
+
+
+#endif //PHYSICSCALCULATOR_VALIDATION_H

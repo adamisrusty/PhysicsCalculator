@@ -3,4 +3,4 @@ project(PhysicsCalculator)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(PhysicsCalculator main.cpp)
+add_executable(PhysicsCalculator main.cpp validation.h physicsCalculations.h physicsHelperFunctions.h)
