@@ -5,6 +5,8 @@
 #ifndef PHYSICSCALCULATOR_PHYSICSHELPERFUNCTIONS_H
 #define PHYSICSCALCULATOR_PHYSICSHELPERFUNCTIONS_H
 
+#include "validation.h"
+
 // Input Helper Functions
 std::string getTimeUnitOfMeasure();
 std::string getDistanceUnitOfMeasure();
@@ -36,7 +38,7 @@ std::string getDistanceUnitOfMeasure() {
 
     std::cout << "Enter the change in distance units of measure: " << std::endl;
 
-    std::cin >> distanceUnits;
+    distanceUnits = validateString(distanceUnits);
 
     return distanceUnits;
 }
@@ -46,7 +48,7 @@ std::string getTimeUnitOfMeasure() {
 
     std::cout << "Enter the time elapsed units of measure: " << std::endl;
 
-    std::cin >> timeUnits;
+    timeUnits = validateString(timeUnits);
 
     return timeUnits;
 }
@@ -56,7 +58,7 @@ std::string getMassUnitOfMeasure() {
 
     std::cout << "Enter the mass units of measure: " << std::endl;
 
-    std::cin >> massUnits;
+    massUnits = validateString(massUnits);
 
     return massUnits;
 }
@@ -67,7 +69,7 @@ double getChangeInVelocity(const std::string& distanceUnits, const std::string& 
     std::cout << "Enter the change in velocity (" << distanceUnits << "/";
     std::cout << timeUnits << "): " << std::endl;
 
-    std::cin >> velocityDelta;
+    velocityDelta = validateDouble(velocityDelta);
 
     return  velocityDelta;
 }
@@ -78,7 +80,7 @@ double getChangeInTime(const std::string& timeUnits){
     std::cout << "Enter the time elapsed in " << timeUnits << ": ";
     std::cout << std::endl;
 
-    std::cin >> timeDelta;
+    timeDelta = validateDouble(timeDelta);
 
     return timeDelta;
 }
@@ -89,7 +91,7 @@ double getChangeInDistance(const std::string& distanceUnits) {
     std::cout << "Enter the change in distance in " << distanceUnits;
     std::cout << ": " << std::endl;
 
-    std::cin >> distanceDelta;
+    distanceDelta = validateDouble(distanceDelta);
 
     return distanceDelta;
 }
@@ -99,7 +101,7 @@ double getMass(const std::string& massUnits) {
 
     std::cout << "Enter the mass in " << massUnits << ": " << std::endl;
 
-    std::cin >> mass;
+    mass = validateDouble(mass);
 
     return mass;
 }
@@ -109,7 +111,7 @@ double getGravity() {
 
     std::cout << "Enter the mass in Newtons: " << std::endl;
 
-    std::cin >> gravity;
+    gravity = validateDouble(gravity);
 
     return gravity;
 }
@@ -120,7 +122,7 @@ double getInitialVelocity(const std::string& distanceUnits, const std::string& t
     std::cout << "Please enter the initial velocity in ";
     std::cout << distanceUnits << "/" << timeUnits << ": " << std::endl;
 
-    std::cin >> initialVelocity;
+    initialVelocity = validateDouble(initialVelocity);
 
     return initialVelocity;
 }
@@ -131,7 +133,7 @@ double getAcceleration(const std::string& distanceUnits, const std::string& time
     std::cout << "Please enter the acceleration (" << distanceUnits;
     std::cout << "/" << timeUnits << " squared): " << std::endl;
 
-    std::cin >> acceleration;
+    acceleration = validateDouble(acceleration);
 
     return acceleration;
 }
@@ -142,7 +144,7 @@ double getFinalVelocity(const std::string& distanceUnits, const std::string& tim
     std::cout << "Please enter the final velocity in ";
     std::cout << distanceUnits << "/" << timeUnits << ": " << std::endl;
 
-    std::cin >> finalVelocity;
+    finalVelocity = validateDouble(finalVelocity);
 
     return finalVelocity;
 }
