@@ -44,8 +44,8 @@ double validateDouble(double &doubleInput) {
         try {
             doubleInput = getValidatedInput<double>();
         }
-        catch (std::exception e) {
-            std::cerr << e.what() << ": Invalid input."<< std::endl;
+        catch (__unused std::exception e) {
+            std::cout << "Please enter a number: "<< std::endl;
             continue;
         }
 
@@ -56,14 +56,14 @@ double validateDouble(double &doubleInput) {
 }
 
 char validateChar(char &charInput) {
+
     while (true) {
-        std::cout << "Enter a single letter or number (1 digit): ";
 
         try {
             charInput = getValidatedInput<char>();
         }
-        catch (std::exception e) {
-            std::cerr << e.what() << ": Invalid input."<< std::endl;
+        catch (__unused std::exception e) {
+            std::cout << "Please enter an individual character or number: "<< std::endl;
             continue;
         }
 
@@ -82,8 +82,8 @@ std::string validateString(std::string &stringInput) {
         try {
             stringInput  = getValidatedInput<std::string>();
         }
-        catch (std::exception e) {
-            std::cerr << e.what() << ": Invalid input."<< std::endl;
+        catch (__unused std::exception e) {
+            std::cout << "Please enter a word or words: "<< std::endl;
             continue;
         }
 

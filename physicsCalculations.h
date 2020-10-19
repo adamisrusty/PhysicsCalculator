@@ -33,9 +33,11 @@ void velocityCalc() {
     std::cout << "You entered: " << std::endl;
     outputChangeInDistance(distanceDelta, distanceUnits);
     outputTimeElapsed(timeDelta, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the results
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The velocity is " << velocity << " " << distanceUnits;
     std::cout << "/" << timeUnits << "." << std::endl;
 }
@@ -58,9 +60,11 @@ void accelerationCalc() {
     std::cout << "You entered: " << std::endl;
     outputChangeInVelocity(velocityDelta, distanceUnits, timeUnits);
     outputTimeElapsed(timeDelta, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output results
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The acceleration is " << acceleration << " " << distanceUnits << "/";
     std::cout << timeUnits << " squared." << std::endl;
 }
@@ -86,9 +90,11 @@ void motionVelTimeCalc() {
     outputInitialVelocity(initialVelocity, distanceUnits, timeUnits);
     outputAcceleration(acceleration, distanceUnits, timeUnits);
     outputTimeElapsed(timeDelta, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output calculation results
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The final velocity in " << distanceUnits << "/";
     std::cout << timeUnits << " is: " << finalVelocity << std::endl;
 
@@ -117,9 +123,11 @@ void motionPosTimeCalc() {
     outputInitialVelocity(initialVelocity, distanceUnits, timeUnits);
     outputAcceleration(acceleration, distanceUnits, timeUnits);
     outputTimeElapsed(timeDelta, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The displacement from the initial position is: ";
     std::cout << displacement << std::endl;
 }
@@ -144,9 +152,11 @@ void motionVelPos1Calc() {
     outputInitialVelocity(initialVelocity, distanceUnits, timeUnits);
     outputAcceleration(acceleration, distanceUnits, timeUnits);
     outputChangeInDistance(displacement, distanceUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "Velocity squared is: " << velocitySquared << std::endl;
 }
 
@@ -169,9 +179,11 @@ void motionVelPos2Calc() {
     std::cout << "You entered: " << std::endl;
     outputInitialVelocity(initialVelocity, distanceUnits, timeUnits);
     outputFinalVelocity(finalVelocity, distanceUnits, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The average velocity is " << averageVelocity << std::endl;
 }
 
@@ -194,9 +206,11 @@ void newtonSecondCalc() {
     std::cout << "You entered: " << std::endl;
     outputAcceleration(acceleration, distanceUnits, timeUnits);
     outputMass(mass, massUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The force is " << forceInNewtons << " " << massUnits;
     std::cout << " " << distanceUnits << "/" << timeUnits << " squared";
 }
@@ -218,9 +232,11 @@ void weightCalc() {
     std::cout << "You entered: " << std::endl;
     outputMass(mass, massUnits);
     outputGravity(gravity);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The weight is " << weight << " " << massUnits;
     std::cout << std::endl;
 }
@@ -244,9 +260,11 @@ void momentumCalc() {
     std::cout << "You entered: " << std::endl;
     outputMass(mass, massUnits);
     outputFinalVelocity(velocity, distanceUnits, timeUnits);
-    std::cout << std::endl << std::endl;
+    std::cout << std::endl;
 
     // Output the result
+    std::cout << ("\x1B[32mResult\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------\033[0m\t\t") << std::endl;
     std::cout << "The momentum is " << p << " " << massUnits;
     std::cout << " " << distanceUnits << "/" << timeUnits << std::endl;
 }

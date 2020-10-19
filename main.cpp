@@ -29,19 +29,24 @@ int main() {
 }
 
 void printMainMenuCalc() {
-    std::cout << "\nCalculator Options" << std::endl;
-    std::cout << "----------------" << std::endl;
+
+    std::cout << std::endl;
+    std::cout << ("\x1B[32mCalculator Options\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m------------------\033[0m\t\t") << std::endl;
     std::cout << "V: Velocity" << std::endl;
     std::cout << "A: Acceleration" << std::endl;
     std::cout << "M: Motion" << std::endl;
     std::cout << "N: Newton's Second Law" << std::endl;
     std::cout << "O: Momentum" << std::endl;
     std::cout << "W: Weight (Earth)" << std::endl;
-    std::cout << "\nProgram Options" << std::endl;
-    std::cout << "----------------" << std::endl;
+    std::cout << std::endl;
+
+    std::cout << ("\x1B[32mProgram Options\033[0m\t\t") << std::endl;
+    std::cout << ("\x1B[32m---------------\033[0m\t\t") << std::endl;
     std::cout << "C: To clear screen" << std::endl;
     std::cout << "E: To exit" << std::endl;
     std::cout << std::endl;
+
 }
 
 char calcSelector() {
@@ -71,6 +76,7 @@ char calcSelector() {
 //        std::cout << "\033[2J\033[1;1H";  //for ubuntu Linux Option 1 of 2
 //        //Windows: system("cls");
 //        system("clear");
+        std::system("cls");
     } else {
         std::cout << "Error: Please enter one of the menu options to continue.";
         std::cout << std::endl;
@@ -121,7 +127,7 @@ void motionCalc() {
 // DONE: Newton's second law
 // DONE: Weight
 // DONE: Momentum
-// TODO: Add Color
+// DONE: Add Color
 // TODO: Add clear menu option #include system("cls");
 // DONE: calc input validation
-// TODO: TEST all calculations
+// DONE: TEST all calculations
