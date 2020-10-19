@@ -29,21 +29,25 @@ int main() {
 }
 
 void printMainMenuCalc() {
-    std::cout << "\nMenu" << std::endl;
-    std::cout << "-----" << std::endl;
+    std::cout << "\nCalculator Options" << std::endl;
+    std::cout << "----------------" << std::endl;
     std::cout << "V: Velocity" << std::endl;
     std::cout << "A: Acceleration" << std::endl;
     std::cout << "M: Motion" << std::endl;
     std::cout << "N: Newton's Second Law" << std::endl;
     std::cout << "O: Momentum" << std::endl;
     std::cout << "W: Weight (Earth)" << std::endl;
+    std::cout << "\nProgram Options" << std::endl;
+    std::cout << "----------------" << std::endl;
+    std::cout << "C: To clear screen" << std::endl;
     std::cout << "E: To exit" << std::endl;
+    std::cout << std::endl;
 }
 
 char calcSelector() {
     char selector;
 
-    std::cin >> selector;
+    selector = validateChar(selector);
 
     if (selector == 'E' || selector == 'e') {
         std::cout << "Exiting Program...";
@@ -59,6 +63,14 @@ char calcSelector() {
         weightCalc();
     } else if (selector == 'O' || selector == 'o') {
         momentumCalc();
+    } else if (selector == 'C' || selector == 'c') {
+        std::cout << "Clearing Screen..." << std::endl;
+//        std::string reset = "\x1b[0m";
+//        //Linux Umbunu
+//        std::cout << reset;
+//        std::cout << "\033[2J\033[1;1H";  //for ubuntu Linux Option 1 of 2
+//        //Windows: system("cls");
+//        system("clear");
     } else {
         std::cout << "Error: Please enter one of the menu options to continue.";
         std::cout << std::endl;
@@ -78,7 +90,7 @@ void motionCalc() {
         std::cout << "3: Velocity-Position Relation (Method 1)" << std::endl;
         std::cout << "4: Velocity-Position Relation (Method 2)" << std::endl;
 
-        std::cin >> equationOfMotionSelector;
+        equationOfMotionSelector = validateChar(equationOfMotionSelector);
 
         if (equationOfMotionSelector == '1') {
             motionVelTimeCalc();
@@ -111,5 +123,5 @@ void motionCalc() {
 // DONE: Momentum
 // TODO: Add Color
 // TODO: Add clear menu option #include system("cls");
-// FIXME: calc input validation
+// DONE: calc input validation
 // TODO: TEST all calculations
