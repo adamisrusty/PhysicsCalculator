@@ -71,6 +71,7 @@ char calcSelector() {
 //        std::cout << "\033[2J\033[1;1H";  //for ubuntu Linux Option 1 of 2
 //        //Windows: system("cls");
 //        system("clear");
+        std::system("cls");
     } else {
         std::cout << "Error: Please enter one of the menu options to continue.";
         std::cout << std::endl;

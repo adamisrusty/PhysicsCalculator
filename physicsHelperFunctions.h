@@ -109,7 +109,7 @@ double getMass(const std::string& massUnits) {
 double getGravity() {
     double gravity;
 
-    std::cout << "Enter the mass in Newtons: " << std::endl;
+    std::cout << "Enter the force in Newtons: " << std::endl;
 
     gravity = validateDouble(gravity);
 
