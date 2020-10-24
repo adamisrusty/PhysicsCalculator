@@ -1,12 +1,10 @@
-//
-// Created by Adam Gutierrez on 10/17/20.
-//
+//From: http://stackoverflow.com/questions/514420/how-to-validate-numeric-input-c
 #ifndef PHYSICSCALCULATOR_VALIDATION_H
 #define PHYSICSCALCULATOR_VALIDATION_H
 
 #include <string>
 
-int validateInt(int &);
+__unused int validateInt(int &);
 double validateDouble(double &);
 char validateChar(char &);
 std::string validateString(std::string &);
@@ -44,7 +42,7 @@ double validateDouble(double &doubleInput) {
         try {
             doubleInput = getValidatedInput<double>();
         }
-        catch (__unused std::exception e) {
+        catch (__unused std::exception &e) {
             std::cout << "Please enter a number: "<< std::endl;
             continue;
         }
@@ -62,7 +60,7 @@ char validateChar(char &charInput) {
         try {
             charInput = getValidatedInput<char>();
         }
-        catch (__unused std::exception e) {
+        catch (__unused std::exception &e) {
             std::cout << "Please enter an individual character or number: "<< std::endl;
             continue;
         }
@@ -82,7 +80,7 @@ std::string validateString(std::string &stringInput) {
         try {
             stringInput  = getValidatedInput<std::string>();
         }
-        catch (__unused std::exception e) {
+        catch (__unused std::exception &e) {
             std::cout << "Please enter a word or words: "<< std::endl;
             continue;
         }
