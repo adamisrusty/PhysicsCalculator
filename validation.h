@@ -15,13 +15,13 @@ T getValidatedInput() {
     T result;
     std::cin >> result;
 
-    // Check if the failbit has been set, meaning the beginning of the input
+    // Check if the fail bit has been set, meaning the beginning of the input
     // was not type T. Also make sure the result is the only thing in the input
     // stream, otherwise things like 2b would be a valid int.
     if (std::cin.fail() || std::cin.get() != '\n') {
-        // Set the error state flag back to goodbit. If you need to get the input
+        // Set the error state flag back to good bit. If you need to get the input
         // again (e.g. this is in a while loop), this is essential. Otherwise, the
-        // failbit will stay set.
+        // fail bit will stay set.
         std::cin.clear();
 
         // Clear the input stream using and empty while loop.
@@ -74,8 +74,6 @@ char validateChar(char &charInput) {
 std::string validateString(std::string &stringInput) {
     while (true) {
         //use cin, getline() for this
-
-        // cout << "Enter a word (no spaces): ";
 
         try {
             stringInput  = getValidatedInput<std::string>();
