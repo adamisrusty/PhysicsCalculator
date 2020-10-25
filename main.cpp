@@ -71,7 +71,7 @@ char calcSelector() {
     } else if (selector == 'C' || selector == 'c') {
         std::cout << "Clearing Screen..." << std::endl;
 //        std::string reset = "\x1b[0m";
-//        //Linux Umbunu
+//        // Linux
 //        std::cout << reset;
 //        std::cout << "\033[2J\033[1;1H";  //for ubuntu Linux Option 1 of 2
 //        //Windows: system("cls");
